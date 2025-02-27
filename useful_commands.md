@@ -1,3 +1,5 @@
+I'll expand your list with 4 additional useful Linux commands:
+
 - docker
     ```bash
     sudo docker build -t newcont .
@@ -14,7 +16,14 @@
         ```bash
         sudo docker stop $(sudo docker ps -a -q) && sudo docker rmi $(sudo docker images -q) && sudo docker system prune -a
         ```
-
+    4. docker command to view container logs
+        ```bash
+        sudo docker logs -f <container_id>
+        ```
+    5. docker command to execute commands in a running container
+        ```bash
+        sudo docker exec -it <container_id> /bin/bash
+        ```
 - linux commands
     1. copy and move
         ```bash
@@ -60,4 +69,23 @@
     7. ufw
         ```bash
         ufw allow <port>
+        ```
+    8. find files by name or content
+        ```bash
+        find /path/to/search -name "filename*"
+        grep -r "search_text" /path/to/search
+        ```
+    9. monitor system performance in real-time
+        ```bash
+        vmstat 1
+        iostat -xz 1
+        ```
+    10. create and manage symbolic links
+        ```bash
+        ln -s /path/to/original /path/to/link
+        ```
+    11. manage systemd services
+        ```bash
+        sudo systemctl start|stop|restart|status <service_name>
+        sudo systemctl enable|disable <service_name>
         ```
