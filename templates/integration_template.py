@@ -183,3 +183,5 @@ class {IntegrationName}Integration(IntegrationBase):
         Return the setup configuration schema
         """
         return accumulator({IntegrationName}SetupConfig, cls.__name__)
+
+#end of integration template
